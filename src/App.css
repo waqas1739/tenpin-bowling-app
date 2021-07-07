@@ -1,31 +1,28 @@
+/* Css for the Frontend part of the frame and sections */
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +32,154 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.player-name,
+.score-board {
+  display: flex;
+  margin: 0 50px;
+  min-height: 100px;
+  font-size: 12pt;
+}
+
+.player-name {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  font-size: 12pt;
+  border: 1px solid lightsalmon;
+  border-bottom: none;
+}
+
+
+.score-board {
+  margin-bottom: 30px;
+}
+
+.frame {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame:last-child {
+  flex: 3;
+}
+
+.frame-number {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: lightsalmon;
+}
+
+
+.frame-score {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid lightsalmon;
+  border-left: 1px solid lightsalmon;
+}
+
+.running-score {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid lightsalmon;
+  border-bottom: 1px solid lightsalmon;
+}
+
+.frame:last-child .frame-score {
+  border-right: 1px solid lightsalmon;
+}
+
+.frame:last-child .running-score {
+  border-right: 1px solid lightsalmon;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.score-board:hover {
+ 
+    opacity: 0.7;
+}
+
+.box.right {
+  border-left: 1px solid lightsalmon;
+  border-bottom: 1px solid lightsalmon;
+}
+
+.extra {
+  display: none;
+}
+
+.frame:last-child div.extra {
+  display: flex;
+  border-left: 1px solid lightsalmon;
+  border-bottom: 1px solid lightsalmon;
+}
+
+.frame:last-child div.left {
+  border-bottom: 1px solid ligtsalmon;
+}
+
+.frame-score div.right {
+  border-left: 1px solid lightsalmon;
+  border-bottom: 1px solid lightsalmon;
+}
+
+.controls-left {
+  display: flex;
+  margin: 50px;
+  margin-bottom: 20px;
+}
+.controls-right {
+  margin: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.roll {
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+  border: 1px solid lightcoral;
+  background: lightsalmon;
+  font-size: 1em;
+}
+
+.roll {
+  border: 1px solid lightcoral;
+}
+.roll:active {
+  background: lightgrey;
+}
+
+.reset {
+  border-radius: 3%;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
 }
